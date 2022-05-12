@@ -1,0 +1,24 @@
+.container {
+  margin-top: 1rem;
+}
+
+.titulo {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  background-color: hsl(0, 0, 84%);
+}
+
+.subtitulo {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.opcao {
+  margin-bottom: 0.25rem;
+  padding-left: 0.4rem;
+
+  label {
+    margin-left: 0.5rem;
+  }
+}

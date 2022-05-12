@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="titulo">
+    <span>{{titulo}}</span>
+    <div class="subtitulo" *ngIf="escolhaAte > 1">Escolha até {{escolhaAte}}
+      <span *ngIf="selectedItems.size > 0">({{selectedItems.size}} selecionado(s))</span>
+    </div>
+  </div>
+
+
+  <div *ngIf="escolhaAte == 1" class="one">
+    <div class="opcao" *ngFor="let opt of opcoes" (change)="onSelectItem(opt, $event)">
+      <input type="radio" [id]="opt" name="one" [value]="opt">
+      <label [for]="opt">{{opt}}</label><br>
+    </div>
+  </div>
+
+  <div class="many" *ngIf="escolhaAte > 1">
+    <div class="opcao" *ngFor="let opt of opcoes" (change)="onSelectItem(opt, $event)">
+      <input type="checkbox" [name]="opt" [id]="opt" [disabled]="disable(opt)">
+      <label [for]="opt">{{opt}}</label><br />
+    </div>
+  </div>
+
+</div>
